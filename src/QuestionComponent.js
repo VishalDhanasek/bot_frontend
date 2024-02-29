@@ -38,7 +38,7 @@ const QuestionComponent = () => {
         {chatHistory.map((item, index) => (
           <div key={index} className={`flex items-start gap-2.5 ${item.type === 'user' ? 'justify-end' : ''}`}>
             {item.type === 'user' ? (
-              <div className={`flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-gray-300 rounded-lg mb-5 ${item.type === 'user' ? 'text-gray-800' : 'bg-gray-300 text-white  mb-10'}`}>
+              <div className={`flex flex-col w-full max-w-[600px] leading-1.5 p-4 bg-gray-300 rounded-lg mb-5 ${item.type === 'user' ? 'text-gray-800' : 'bg-gray-300 text-white  mb-10'}`}>
                 <div className="flex items-center space-x-2 rtl:space-x-reverse">
                   <span className={`${item.type === 'user' ? 'text-gray-900 ' : 'text-sm font-bold text-white '}`}>{item.type === 'user' ? 'You' : 'Bot'}</span>
                 </div>
@@ -60,11 +60,11 @@ const QuestionComponent = () => {
           type="text"
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
-          className="flex-1 px-4 py-2 mr-4 bg-gray-800 border border-gray-700 rounded text-white"
+          className="flex-1 px-4 py-2 mr-4 bg-gray-300 border border-gray-700 rounded text-gray-800"
         />
         <button
           onClick={handleSubmit}
-          className="px-4 py-2 bg-blue-500 text-white rounded"
+          className="px-4 py-2 bg-indigo-500  hover:bg-indigo-700 text-white rounded font-bold"
           disabled={loading || !question.trim()}
         >
           {loading ? 'Sending...' : 'Submit'}

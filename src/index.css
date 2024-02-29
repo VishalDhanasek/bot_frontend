@@ -15,3 +15,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Add these styles to your CSS or directly in your component */
+.dropzone {
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropzone p {
+  margin-bottom: 0;
+}
